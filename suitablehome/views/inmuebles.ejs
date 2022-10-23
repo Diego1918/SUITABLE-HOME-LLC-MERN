@@ -1,0 +1,39 @@
+<%- include("template/cabecera",{tituloweb: "Inmuebles"}) %>
+  <body>
+    <div class="container">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Baños</th>
+                <th scope="col">Habitaciones</th>
+                <th scope="col">Metros Cuadrados</th>
+                <th scope="col">Condición en el mercado</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% if (arrayInmuebles.length >0) { %>
+                    <% arrayInmuebles.forEach(inmueble => { %>
+              <tr>
+                <th scope="row"><%= inmueble.id %> </th>
+                <td> <%= inmueble.direccion%></td>
+                <td><%= inmueble.tipo%></td>
+                <td><%= inmueble.banos%></td>
+                <td><%= inmueble.habitaciones%></td>
+                <td><%= inmueble.metros2%></td>
+                <td><%= inmueble.condicion%></td>
+                <td><%= inmueble.precio%></td>
+              </tr> 
+              <% }) %>    
+            <% } %>
+            </tbody>
+          </table>
+     
+        
+    </div>
+  </body>
+</html>
