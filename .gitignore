@@ -17,3 +17,6 @@
 *.tar.gz
 *.ear
 *.nar
+
+#node_modules
+node_modules/
